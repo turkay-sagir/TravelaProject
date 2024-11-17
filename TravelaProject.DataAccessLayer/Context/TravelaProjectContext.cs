@@ -9,11 +9,11 @@ using TravelaProject.EntityLayer.Concrete;
 
 namespace TravelaProject.DataAccessLayer.Context
 {
-    public class TravelaContext:IdentityDbContext<AppUser,AppRole,int>
+    public class TravelaProjectContext:IdentityDbContext<AppUser,AppRole,int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("SERVER=DESKTOP-ER46C3V;initial catalog=DbTravelaProject;integrated security=true");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-ER46C3V;initial catalog=DbTravelaProject;integrated security=true");
         }
 
         public DbSet<Category> Categories { get; set; }
